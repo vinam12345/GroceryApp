@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhoneLogin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Phone Number"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone number. "
+        android:id="@+id/phone"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:inputType="phone"
+        android:layout_marginEnd="20dp"
+        android:maxLength="10"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate OTP"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/generateOtp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:backgroundTint="#061A8C"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OTP"
+        android:id="@+id/otp"
+        android:layout_marginStart="20dp"
+        android:inputType="number"
+        android:maxLength="10"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:backgroundTint="#061A8C"
+        android:layout_gravity="center"
+        android:id="@+id/verifyOtp"
+        android:enabled="false"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+</LinearLayout>

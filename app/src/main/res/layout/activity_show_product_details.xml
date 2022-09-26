@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".ShowProductDetails">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/firstcover"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="@drawable/backgroud_product_show"
+            tools:ignore="UselessParent">
+            <ImageView
+                android:background="@drawable/circle_bg_button"
+                android:id="@+id/back_img"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/black" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="250dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Mens Stylish Blue Shirt"
+                android:layout_below="@id/back_img"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:fontFamily="@font/muli_bold"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle_bg"
+                android:layout_below="@id/back_img"
+                android:layout_margin="20dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_fav"
+                    android:padding="1dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/sellername"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seller Name"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/blink"
+                android:alpha=".5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/muli_bold"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="278dp"
+                android:layout_height="350dp"
+                android:layout_below="@id/sellername"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="116dp"
+                android:layout_toRightOf="@id/cover"
+                android:padding="15dp"
+                android:src="@drawable/s1" />
+
+            <LinearLayout
+                android:layout_below="@id/sellername"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="330dp"
+                android:layout_marginRight="50dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/decre"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="101"
+                    android:textColor="@color/price"
+                    android:fontFamily="@font/abhaya_libre_medium"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="18dp" />
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/incre"
+                    app:tint="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:id="@+id/cover"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/circle_bg"
+                android:layout_below="@id/sellername"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="280dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_outline_shopping_cart_24"
+                    android:padding="18dp"
+                    app:tint="@color/white" />
+            </LinearLayout>
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/rupeesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8377; "
+                android:textSize="20sp"
+                android:layout_marginTop="100dp"
+                android:layout_below="@id/sellername"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="180"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/rupeesign"
+                android:layout_alignBaseline="@id/rupeesign"
+                android:textSize="35dp"
+                android:fontFamily="@font/abhaya_libre_medium" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:id="@+id/desc"
+            android:layout_below="@id/firstcover"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/muli_bold"/>
+        <TextView
+            android:layout_below="@id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="@string/dummydata"/>
+    </RelativeLayout>
+</ScrollView>
+</LinearLayout>
